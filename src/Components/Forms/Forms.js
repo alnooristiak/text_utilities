@@ -30,14 +30,18 @@ const Forms = () => {
     return (
         <div>
             <div className='container'>
-                <div className="mb-3">
-                    <label for="exampleFormControlTextarea1" className="form-label">
-                        <h4>Example textarea</h4>
-                    </label>
-                    <button className='btn btn-danger' onClick={handleCopyText}>Clear Text</button>
-                    <textarea className="form-control" value={text} onChange={handleonChanged} id="exampleFormControlTextarea1" rows="8"></textarea>
-                    <button className='btn btn-primary' onClick={handleUpClick}>Upper Case</button>
-                    <button className='btn btn-primary' onClick={handleLoClick}>Lower Case</button>
+                <div className="mb-3 py-4">
+                    <div className='pb-3'>
+                        <label for="exampleFormControlTextarea1" className="form-label me-2">
+                            <h4 className='text-primary'>Example textarea</h4>
+                        </label>
+                        <button className='btn btn-danger' onClick={handleCopyText}>Clear Text</button>
+                    </div>
+                    <textarea className="mb-3 form-control" value={text} onChange={handleonChanged} id="exampleFormControlTextarea1" rows="8"></textarea>
+                    <div className='py-2'>
+                        <button className='me-2 btn btn-primary' onClick={handleUpClick}>Upper Case</button>
+                        <button className='btn btn-primary' onClick={handleLoClick}>Lower Case</button>
+                    </div>
                     <div>
                         <button className='btn btn-danger' onClick={handleClearText}>Clear Text</button>
                     </div>
@@ -51,7 +55,7 @@ const Forms = () => {
                 <p>{0.008 * text.split(' ').length} Minut's to read.</p> */}
                 </div>
                 <h3>Preview Text:</h3>
-                <p className='fw-bold text-danger'>{text}</p>
+                <p className='fw-bold text-primary'>{text}</p>
             </div>
         </div>
     );

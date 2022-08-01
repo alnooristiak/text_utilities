@@ -3,7 +3,7 @@ import React from 'react';
 const Nav = (props) => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">Text</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +33,11 @@ const Nav = (props) => {
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
+                    <div className="form-check form-switch">
+                        <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onClick={props.lightDark}/>
+                        <label className="form-check-label text-danger fw-bolder" for="flexSwitchCheckDefault">{props.btntx}
+                        </label>
+                    </div>
                     </div>
                 </div>
             </nav>
